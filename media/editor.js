@@ -3,6 +3,9 @@
 const vscode = acquireVsCodeApi();
 const editor = document.getElementById("editor");
 const preview = document.getElementById("preview_inner");
+const java = document.getElementById("java");
+const bedrock = document.getElementById("bedrock");
+const render = document.getElementById("render");
 var formatters = {
   "§0": '<span class="s0">',
   "§1": '<span class="s1">',
@@ -75,14 +78,15 @@ function updateContent(text) {
   /**
    * @type {String[]}
    */
-  var lines = result.$lines;
+  var lines = json.$lines;
   var p = "";
 
   for (var i = 0; i < lines.length; i++) {
     p += highlightString(json[lines[i].substring(0, lines[i].lastIndexOf("="))]);
+    p += "<br>";
   }
 
-  preview.innerText = p;
+  preview.innerHTML = p;
 }
 
 //#endregion
@@ -100,16 +104,46 @@ window.addEventListener("message", (event) => {
   }
 });
 
-var last;
-
-setInterval(function () {
-  if (editor.innerText !== last) {
-    last = editor.innerText;
-    vscode.postMessage({ type: "content", code: editor.innerText });
-  }
-}, 1000);
-
 const state = vscode.getState();
 if (state) {
   updateContent(state.text);
 }
+
+//#region Typing handler
+var typingTimer; //timer identifier
+var doneTypingInterval = 1000; //time in ms, 5 seconds for example
+var $input = editor;
+
+//on keyup, start the countdown
+$input.addEventListener("keyup", function () {
+  clearTimeout(typingTimer);
+  typingTimer = setTimeout(doneTyping, doneTypingInterval);
+});
+
+//on keydown, clear the countdown
+$input.addEventListener("keydown", function () {
+  clearTimeout(typingTimer);
+});
+//#endregion
+
+var last = editor.innerText;
+//user is "finished typing," do something
+function doneTyping() {
+  if (editor.innerText !== last) {
+    updateContent(editor.innerText);
+    last = editor.innerText;
+    vscode.postMessage({ type: "content", code: editor.innerText });
+  }
+}
+
+java.addEventListener("click", function () {
+  document.body.classList.add("java");
+  document.body.classList.remove("bedrock");
+  render.innerText = "Java";
+});
+bedrock.addEventListener("click", function () {
+  document.body.classList.add("bedrock");
+  document.body.classList.remove("java");
+  render.innerText = "Bedrock";
+});
+java.click();

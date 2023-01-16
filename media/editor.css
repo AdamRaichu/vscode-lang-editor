@@ -23,6 +23,15 @@ body {
   font-family: "Monocraft";
 }
 
+#preview pre {
+  position: absolute;
+  right: 15px;
+}
+
+pre, code {
+  white-space: pre-line;
+}
+
 
 /* -----FORMATTERS------ */
 .s0 {
