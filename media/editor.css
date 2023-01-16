@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "Monocraft";
+  src: url(./Monocraft.otf);
+}
+
+body {
+  margin: 0px;
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#content,
+#preview {
+  width: 50vw;
+  height: 100vh;
+}
+
+#preview {
+  font-family: "Monocraft";
+}
+
+
+/* -----FORMATTERS------ */
+.s0 {
+  color: #000000;
+  text-shadow: 2px 1.5px #000000;
+}
+
+.s1 {
+  color: #0000aa;
+  text-shadow: 2px 1.5px #00002a;
+}
+
+.s2 {
+  color: #00aa00;
+  text-shadow: 2px 1.5px #002a00;
+}
+
+.s3 {
+  color: #00aaaa;
+  text-shadow: 2px 1.5px #002a2a;
+}
+
+.s4 {
+  color: #aa0000;
+  text-shadow: 2px 1.5px #2a0000;
+}
+
+.s5 {
+  color: #aa00aa;
+  text-shadow: 2px 1.5px #2a002a;
+}
+
+.s6 {
+  color: #ffaa00;
+}
+
+.java .s6 {
+  text-shadow: 2px 1.5px #2a2a00;
+}
+
+.bedrock .s6 {
+  text-shadow: 2px 1.5px #402a00;
+}
+
+.s7 {
+  color: #aaaaaa;
+  text-shadow: 2px 1.5px #2a2a2a;
+}
+
+.s8 {
+  color: #555555;
+  text-shadow: 2px 1.5px #151515;
+}
+
+.s9 {
+  color: #5555ff;
+  text-shadow: 2px 1.5px #15153f;
+}
+
+.sa {
+  color: #55ff55;
+  text-shadow: 2px 1.5px #153f15;
+}
+
+.sb {
+  color: #55ffff;
+  text-shadow: 2px 1.5px #153f3f;
+}
+
+.sc {
+  color: #ff5555;
+  text-shadow: 2px 1.5px #3f1515;
+}
+
+.sd {
+  color: #ff55ff;
+  text-shadow: 2px 1.5px #3f153f;
+}
+
+.se {
+  color: #ffff55;
+  text-shadow: 2px 1.5px #3f3f15;
+}
+
+.sf {
+  color: #ffffff;
+  text-shadow: 2px 1.5px #3f3f3f;
+}
+
+.bedrock .sg {
+  color: #373501;
+}
+
+.sk {
+  filter: blur(1.5px);
+}
+
+.sl {
+  font-weight: bold;
+}
+
+.java .sm {
+  text-decoration: line-through;
+}
+
+.java .sn {
+  text-decoration: underline;
+}
+
+.java .sm .sn,
+.java .sn .sm {
+  text-decoration: line-through underline;
+}
+
+.so {
+  font-style: italic;
+}
+
+.sr {
+  color: #ffffff;
+  text-shadow: 2px 1.5px #3f3f3f;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: normal;
+  filter: none;
+}
+
+/* ------END FORMATTERS------ */

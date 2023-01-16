@@ -1,22 +1,40 @@
 {
-  "name": "example-namespace",
-  "displayName": "User-visible name",
+  "name": "lang-editor",
+  "displayName": "Minecraft .lang Editor",
   "description": "A short description of the extension",
   "publisher": "adamraichu",
-  "icon": "logo.png",
+  "version": "1.0.0",
+  "icon": "i18n.png",
   "author": {
     "name": "AdamRaichu"
   },
-  "categories": [],
+  "categories": [
+    "Programming Languages",
+    "Visualization"
+  ],
   "repository": {
-    "url": "https://github.com/AdamRaichu/vscode-webext-template"
+    "url": "https://github.com/AdamRaichu/vscode-lang-editor"
   },
-  "version": "1.0.0",
-  "browser": "/extension.js",
-  "main": "/extension.js",
-  "activationEvents": [],
+  "browser": "/dist/main.js",
+  "main": "/dist/main.js",
   "engines": {
     "vscode": "^1.63.0"
   },
-  "contributes": {}
+  "activationEvents": [
+    "onCustomEditor:langEditor.LangEdit"
+  ],
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "langEditor.LangEdit",
+        "displayName": "Lang Editor",
+        "selector": [
+          {
+            "filenamePattern": "**/texts/*.lang"
+          }
+        ],
+        "priority": "default"
+      }
+    ]
+  }
 }
