@@ -1,15 +1,14 @@
 {
   "name": "lang-editor",
   "displayName": "Minecraft .lang Editor",
-  "description": "A short description of the extension",
+  "description": "A custom editor for vizualizing .lang file.",
   "publisher": "adamraichu",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icon": "i18n.png",
   "author": {
     "name": "AdamRaichu"
   },
   "categories": [
-    "Programming Languages",
     "Visualization"
   ],
   "repository": {

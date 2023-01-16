@@ -1,4 +1,5 @@
 # Minecraft .lang Editor
+
 <!-- markdownlint-disable MD033 -->
 <div align="center">
 
@@ -14,6 +15,8 @@
 </div>
 
 A VS Code extension which contributes a custom editor for Minecraft's `.lang` files.
+
+> **Warning**: This extension is still in early development. Opening a large file currently causes the extension to hang my browser, so I would recommend only using it for small files. Version 2 will have a fixed method of rendering. Sorry for the inconvenience.
 
 ## Installation
 
