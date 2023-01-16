@@ -3,7 +3,7 @@
   "displayName": "Minecraft .lang Editor",
   "description": "A short description of the extension",
   "publisher": "adamraichu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icon": "i18n.png",
   "author": {
     "name": "AdamRaichu"
@@ -21,8 +21,7 @@
     "vscode": "^1.63.0"
   },
   "activationEvents": [
-    "onCustomEditor:langEditor.LangEdit",
-    "*"
+    "onCustomEditor:langEditor.LangEdit"
   ],
   "contributes": {
     "customEditors": [
