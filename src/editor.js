@@ -1,4 +1,5 @@
 const vscode = require("vscode");
+import table from "./table.js";
 const extUri = vscode.extensions.getExtension("adamraichu.lang-editor").extensionUri;
 
 export default class LangEdit {
@@ -72,6 +73,7 @@ export default class LangEdit {
         <code id="preview_inner" class="sr"></code>
       </pre>
     </div>
+    ${table}
   </div>
 </body>
 </html>`;

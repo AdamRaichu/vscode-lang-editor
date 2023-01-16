@@ -111,7 +111,7 @@ if (state) {
 
 //#region Typing handler
 var typingTimer; //timer identifier
-var doneTypingInterval = 1000; //time in ms, 5 seconds for example
+var doneTypingInterval = 3000; //time in ms, 5 seconds for example
 var $input = editor;
 
 //on keyup, start the countdown
