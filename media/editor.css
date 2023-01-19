@@ -121,7 +121,8 @@ pre, code {
 }
 
 .bedrock .sg {
-  color: #373501;
+  color: #ddd605;
+  text-shadow: 2px 1.5px #373501;
 }
 
 .sk {
